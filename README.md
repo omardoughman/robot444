@@ -1,60 +1,28 @@
-# `react-dom`
+# PostCSS
 
-This package serves as the entry point to the DOM and server renderers for React. It is intended to be paired with the generic React package, which is shipped as `react` to npm.
+<img align="right" width="95" height="95"
+     alt="Philosopher’s stone, logo of PostCSS"
+     src="https://postcss.org/logo.svg">
 
-## Installation
+PostCSS is a tool for transforming styles with JS plugins.
+These plugins can lint your CSS, support variables and mixins,
+transpile future CSS syntax, inline images, and more.
 
-```sh
-npm install react react-dom
-```
+PostCSS is used by industry leaders including Wikipedia, Twitter, Alibaba,
+and JetBrains. The [Autoprefixer] and [Stylelint] PostCSS plugins is one of the most popular CSS tools.
 
-## Usage
+---
 
-### In the browser
+<img src="https://cdn.evilmartians.com/badges/logo-no-label.svg" alt="" width="22" height="16" />  Made in <b><a href="https://evilmartians.com/?utm_source=postcss&utm_campaign=devtools-button&utm_medium=github">Evil Martians</a></b>, product consulting for <b>developer tools</b>.
 
-```js
-import { createRoot } from 'react-dom/client';
+---
 
-function App() {
-  return <div>Hello World</div>;
-}
+[Abstract Syntax Tree]: https://en.wikipedia.org/wiki/Abstract_syntax_tree
+[Evil Martians]:        https://evilmartians.com/?utm_source=postcss
+[Autoprefixer]:         https://github.com/postcss/autoprefixer
+[Stylelint]:            https://stylelint.io/
+[plugins]:              https://github.com/postcss/postcss#plugins
 
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
-```
 
-### On the server
-
-```js
-import { renderToPipeableStream } from 'react-dom/server';
-
-function App() {
-  return <div>Hello World</div>;
-}
-
-function handleRequest(res) {
-  // ... in your server handler ...
-  const stream = renderToPipeableStream(<App />, {
-    onShellReady() {
-      res.statusCode = 200;
-      res.setHeader('Content-type', 'text/html');
-      stream.pipe(res);
-    },
-    // ...
-  });
-}
-```
-
-## API
-
-### `react-dom`
-
-See https://react.dev/reference/react-dom
-
-### `react-dom/client`
-
-See https://react.dev/reference/react-dom/client
-
-### `react-dom/server`
-
-See https://react.dev/reference/react-dom/server
+## Docs
+Read full docs **[here](https://postcss.org/)**.
