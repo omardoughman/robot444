@@ -1,25 +1,12 @@
 {
-  "name": "picocolors",
-  "version": "1.1.1",
-  "main": "./picocolors.js",
-  "types": "./picocolors.d.ts",
-  "browser": {
-    "./picocolors.js": "./picocolors.browser.js"
+  "name": "robot444",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "sideEffects": false,
-  "description": "The tiniest and the fastest library for terminal output formatting with ANSI colors",
-  "files": [
-    "picocolors.*",
-    "types.d.ts"
-  ],
-  "keywords": [
-    "terminal",
-    "colors",
-    "formatting",
-    "cli",
-    "console"
-  ],
-  "author": "Alexey Raspopov",
-  "repository": "alexeyraspopov/picocolors",
+  "keywords": [],
+  "author": "",
   "license": "ISC"
 }
